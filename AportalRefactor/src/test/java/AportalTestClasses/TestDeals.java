@@ -30,6 +30,7 @@ public class TestDeals {
 	public static String[] DealValue=new String[RowCount];
 	public static String[] ItemName=new String[RowCount];
 	public static String sample;
+	public static String sample1;
 	
 //	
 //	@Test(priority=0)

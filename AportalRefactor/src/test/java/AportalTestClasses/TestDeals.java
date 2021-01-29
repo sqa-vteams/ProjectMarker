@@ -29,7 +29,7 @@ public class TestDeals {
 	public static String[] DealSubTitle=new String[RowCount];
 	public static String[] DealValue=new String[RowCount];
 	public static String[] ItemName=new String[RowCount];
-	
+	public static String sample;
 	
 //	
 //	@Test(priority=0)

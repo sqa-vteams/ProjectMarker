@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Aportal Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="AportalTestClasses.Items"/>
+  </listeners>
+  <test thread-count="2" name="Items Module Test Suite(failed)" parallel="tests">
+    <classes>
+      <class name="AportalTestClasses.Items">
+        <methods>
+          <include name="afterClass"/>
+          <include name="CompactListings"/>
+          <include name="CreateItem"/>
+          <include name="beforeClass"/>
+          <include name="DraftItem"/>
+          <include name="InactiveItems"/>
+        </methods>
+      </class> <!-- AportalTestClasses.Items -->
+    </classes>
+  </test> <!-- Items Module Test Suite(failed) -->
+</suite> <!-- Failed suite [Aportal Suite] -->

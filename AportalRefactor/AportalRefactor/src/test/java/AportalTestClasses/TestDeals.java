@@ -31,7 +31,7 @@ public class TestDeals {
 	public static String[] ItemName=new String[RowCount];
 	public static String[] Test;
 	public static String[] Test1;
-	
+	public static String[] Test2;
 	
 //	
 //	@Test(priority=0)

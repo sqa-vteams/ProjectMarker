@@ -27,7 +27,7 @@ public class TestShipments {
 	public static String PayTrackingNumber;
 	public static String PayUserEmail;
 	public static String PayAmount;
-	
+	public static String PayAmount1;
 	
   @Test (priority=0)
   public void CreatShipment() throws Exception {

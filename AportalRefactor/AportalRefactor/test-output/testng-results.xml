@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82924" started-at="2021-02-18T15:08:25 PKT" finished-at="2021-02-18T15:09:48 PKT">
+  <suite name="Default suite" duration-ms="96455" started-at="2021-02-19T15:25:48 PKT" finished-at="2021-02-19T15:27:24 PKT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="82924" started-at="2021-02-18T15:08:25 PKT" finished-at="2021-02-18T15:09:48 PKT">
+    <test name="Default test" duration-ms="96455" started-at="2021-02-19T15:25:48 PKT" finished-at="2021-02-19T15:27:24 PKT">
       <class name="AportalTestClasses.TestShipments">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="beforeClass" is-config="true" duration-ms="17648" started-at="2021-02-18T15:08:25 PKT" finished-at="2021-02-18T15:08:43 PKT">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="beforeClass" is-config="true" duration-ms="34272" started-at="2021-02-19T15:25:48 PKT" finished-at="2021-02-19T15:26:22 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="CreatShipment()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="CreatShipment" duration-ms="33602" started-at="2021-02-18T15:08:43 PKT" finished-at="2021-02-18T15:09:16 PKT">
+        <test-method status="PASS" signature="CreatShipment()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="CreatShipment" duration-ms="30760" started-at="2021-02-19T15:26:22 PKT" finished-at="2021-02-19T15:26:53 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreatShipment -->
-        <test-method status="PASS" signature="CreatePayment()[pri:1, instance:AportalTestClasses.TestShipments@68bbe345]" name="CreatePayment" duration-ms="31564" started-at="2021-02-18T15:09:16 PKT" finished-at="2021-02-18T15:09:48 PKT">
+        <test-method status="PASS" signature="CreatePayment()[pri:1, instance:AportalTestClasses.TestShipments@68bbe345]" name="CreatePayment" duration-ms="31227" started-at="2021-02-19T15:26:53 PKT" finished-at="2021-02-19T15:27:24 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreatePayment -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-18T15:09:48 PKT" finished-at="2021-02-18T15:09:48 PKT">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-02-19T15:27:24 PKT" finished-at="2021-02-19T15:27:24 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

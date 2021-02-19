@@ -35,7 +35,7 @@ public class ExcelUtils {
 		   
 			 public ArrayList<ExcelModel> readItemsFromExcel() throws IOException {
 					// Specify the path of file
-					File src = new File("C:\\Users\\farhan.ahmed\\eclipse-workspace\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
+					File src = new File("C:\\Users\\farhan.ahmed\\git\\ProjectMarker\\AportalRefactor\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
 					
 					// load file
 					FileInputStream fi = new FileInputStream(src);
@@ -71,7 +71,7 @@ public class ExcelUtils {
 		 
 			 public ArrayList<ExcelModel> readDealsFromExcel() throws IOException {
 					// Specify the path of file
-					File src = new File("C:\\Users\\farhan.ahmed\\eclipse-workspace\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
+					File src = new File("C:\\Users\\farhan.ahmed\\git\\ProjectMarker\\AportalRefactor\\AportalRefactor\\src\\main\\java\\UtilitiesItems.xlsx");
 					
 					// load file
 					FileInputStream fi = new FileInputStream(src);
@@ -109,8 +109,65 @@ public class ExcelUtils {
 					}
 					return modelList;
 				}
+			 
+			 
+			 public ArrayList<ExcelModel> readShipmentsFromExcel() throws IOException {
+					// Specify the path of file
+					File src = new File("C:\\Users\\farhan.ahmed\\git\\ProjectMarker\\AportalRefactor\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
+					
+					// load file
+					FileInputStream fi = new FileInputStream(src);
+					// Load workbook
+					XSSFWorkbook workbook = new XSSFWorkbook(fi);
+					// Load Sheet
+					XSSFSheet sheet = workbook.getSheet("Sheet3");
+					ArrayList<ExcelModel> modelList = new ArrayList<ExcelModel>();
+					int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
+
+					for (int i = 1; i < rowCount + 1; i++) {
+						//ExcelModel excelModel = new ExcelModel();
+						XSSFRow row = sheet.getRow(i);
+			
+					
+						model.ShipmentTrackingNumer = row.getCell(0).toString();
+						model.ShipmentUserEmail = row.getCell(1).toString();
+						model.ShipmentKHNotes = row.getCell(2).toString();
+						
+						
+						
+						modelList.add(model);
+					}
+					return modelList;
+				}
 		   
-		 
+			 public ArrayList<ExcelModel> readPaymentsFromExcel() throws IOException {
+					// Specify the path of file
+					File src = new File("C:\\Users\\farhan.ahmed\\git\\ProjectMarker\\AportalRefactor\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
+					
+					// load file
+					FileInputStream fi = new FileInputStream(src);
+					// Load workbook
+					XSSFWorkbook workbook = new XSSFWorkbook(fi);
+					// Load Sheet
+					XSSFSheet sheet = workbook.getSheet("Sheet4");
+					ArrayList<ExcelModel> modelList = new ArrayList<ExcelModel>();
+					int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
+
+					for (int i = 1; i < rowCount + 1; i++) {
+						//ExcelModel excelModel = new ExcelModel();
+						XSSFRow row = sheet.getRow(i);
+			
+					
+						model.PaymentTrackingNumber = row.getCell(0).toString();
+						model.PaymentSenderEmail = row.getCell(1).toString();
+						model.PaymentAmount = row.getCell(2).toString();
+						
+						
+						
+						modelList.add(model);
+					}
+					return modelList;
+				}
 		  }
 	
 

@@ -16,6 +16,14 @@ public String DTitle;
 public String DSub;
 public String Dvalue;
 public int RowNumber=3;
+public String ShipmentTrackingNumer;
+public String ShipmentUserEmail;
+public String ShipmentKHNotes;
+public String PaymentTrackingNumber;
+public String PaymentSenderEmail;
+public String PaymentAmount;
+
+
 
 //public String[] DTitle = new String[RowNumber];
 	

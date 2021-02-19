@@ -36,7 +36,7 @@ public class BaseClass {
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		Logger.getLogger("org.openqa.selenium.remote").setLevel(Level.OFF);
 		
-		     String baseUrl = "https://staging-aportalv2.584wed.com/login";
+		     String baseUrl = "https://aportal.foggybeans.com/login";
 
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\farhan.ahmed\\Documents\\chromedriver.exe");
 			driver = new ChromeDriver();

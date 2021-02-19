@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-22T20:51:35 PKT" name="Default suite" finished-at="2021-01-22T20:53:06 PKT" duration-ms="91522">
+  <suite name="Default suite" duration-ms="82924" started-at="2021-02-18T15:08:25 PKT" finished-at="2021-02-18T15:09:48 PKT">
     <groups>
     </groups>
-    <test started-at="2021-01-22T20:51:35 PKT" name="Default test" finished-at="2021-01-22T20:53:06 PKT" duration-ms="91522">
-      <class name="AportalTestClasses.TestDeals">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:51:35 PKT" name="beforeClass" finished-at="2021-01-22T20:52:01 PKT" duration-ms="26541" status="PASS">
+    <test name="Default test" duration-ms="82924" started-at="2021-02-18T15:08:25 PKT" finished-at="2021-02-18T15:09:48 PKT">
+      <class name="AportalTestClasses.TestShipments">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="beforeClass" is-config="true" duration-ms="17648" started-at="2021-02-18T15:08:25 PKT" finished-at="2021-02-18T15:08:43 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="CreateDeal()[pri:0, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:52:01 PKT" name="CreateDeal" finished-at="2021-01-22T20:52:58 PKT" duration-ms="56587" status="PASS">
+        <test-method status="PASS" signature="CreatShipment()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="CreatShipment" duration-ms="33602" started-at="2021-02-18T15:08:43 PKT" finished-at="2021-02-18T15:09:16 PKT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateDeal -->
-        <test-method signature="SendNewsletterEmail()[pri:1, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:52:58 PKT" name="SendNewsletterEmail" finished-at="2021-01-22T20:53:06 PKT" duration-ms="8313" status="PASS">
+        </test-method> <!-- CreatShipment -->
+        <test-method status="PASS" signature="CreatePayment()[pri:1, instance:AportalTestClasses.TestShipments@68bbe345]" name="CreatePayment" duration-ms="31564" started-at="2021-02-18T15:09:16 PKT" finished-at="2021-02-18T15:09:48 PKT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SendNewsletterEmail -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:53:06 PKT" name="afterClass" finished-at="2021-01-22T20:53:06 PKT" duration-ms="0" status="PASS">
+        </test-method> <!-- CreatePayment -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:AportalTestClasses.TestShipments@68bbe345]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-18T15:09:48 PKT" finished-at="2021-02-18T15:09:48 PKT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- AportalTestClasses.TestDeals -->
+      </class> <!-- AportalTestClasses.TestShipments -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

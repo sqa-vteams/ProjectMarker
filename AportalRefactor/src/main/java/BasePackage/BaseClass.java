@@ -24,6 +24,7 @@ public class BaseClass {
 
 
 	public WebDriver driver; 
+	public String test; 
 
 	
 	public BaseClass(WebDriver driver)

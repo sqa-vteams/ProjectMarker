@@ -28,17 +28,57 @@ public class ShipmentsPage {
     By txtAmount=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div/div[2]/div/div/div[1]/form/div[4]/div/div[1]/div/input");
     By btnSavePayment=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div/div[2]/div/div/div[2]/button[2]/span");
     By txtSearchField=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header[1]/div/div/div[1]/div/div/div/div[1]/input");
-    By txtClearSearch=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header[1]/div/div/div[6]/button[1]");		
-    		
+    By txtClearSearch=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header[1]/div/div/div[7]/button[1]");		
+    By btnDealDetails=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/div[2]/table/tbody/tr[1]/td[3]");
+    By btnEditTrackingNumber=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header/div/i");
+    
+   // /html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header/div/i
+    By btnYes=By.xpath("/html/body/div[3]/div/div[3]/button[1]");
+    
+    
+    By txtTrackingEdit=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header/div/div[1]/input");
+    By clkAddNotes=By.xpath("/html/body/div[1]/div/div[2]/div/div[2]/div[2]/div/div/div[4]/header/div/button/span");
+    By txtNotes=By.xpath("/html/body/div[1]/div/div[3]/div/div/div[2]/div[1]/div/div/div/div[1]/div/textarea");
+    By btnSave=By.xpath("/html/body/div[1]/div/div[3]/div/div/div[3]/button[2]/span");
+    By btnEditSenderEmail=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div[1]/div[1]/p/i");
+    
+    
+    By txtEmail=By.xpath("/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]");
+    
+    By btnEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[1]/p/i");
+    
+    By txtEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[1]/input");
+    
+    By btnDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[2]/div/div[1]/div[1]/div/div[3]/span/div/button[1]/span[2]");
+    
+    By btnSaveDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[2]/div/div[2]/button");
+    
+    
+    By btnCurrentStatus=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/header/div/span/span");
+    
+    By btnClosedStatus=By.xpath("/html/body/div[1]/div/div[2]/div/div[2]/div");
+    
+  //  /html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]
+    
+    
+    
     public WebDriver driver;
     String AcutalShipment="";
     String AcutalPayment="";
+    String ActualEmail="";
+    String ActualDate="";
+    String ActualStatus="";
     
     public ShipmentsPage(WebDriver driver)
 	{
 		this.driver=driver;                                                   //Constructor without argument
 	}
 	
+    public static int randomWithRange(int min, int max) {
+		int range = (max - min) + 1;
+		return (int) (Math.random() * range) + min;
+	}
+    
     public void ClickShipmentsPage()
 	{
 		driver.findElement(btnShipmentsPageClick).click();                   
@@ -112,16 +152,18 @@ public class ShipmentsPage {
      }
      
      
-     public void VerifyShipment(String TrackingNumber) throws Exception
+     
+     
+     public void VerifyShipment(String shipmentTrackingNumber) throws Exception
 		{
     	 driver.findElement(txtSearchField).clear(); 
-    	 driver.findElement(txtSearchField).sendKeys(TrackingNumber); 
+    	 driver.findElement(txtSearchField).sendKeys(shipmentTrackingNumber); 
     	 driver.findElement(txtSearchField).sendKeys(Keys.ENTER); 
     	 Thread.sleep(5000);
     	 
     	 AcutalShipment=driver.getPageSource();
 			
-				Assert.assertTrue(AcutalShipment.contains(TrackingNumber));
+				Assert.assertTrue(AcutalShipment.contains(shipmentTrackingNumber));
 			{
 				Log.info("****************************************Shipment has been Verified  ************************************************");
 				System.out.println("Shipment has been Verified"); 
@@ -155,5 +197,142 @@ public class ShipmentsPage {
 			
 			
 		}
+     
+     public void SearchTrackingNumber(String TrackingNumber) throws Exception
+     {
+    	 driver.findElement(txtClearSearch).click();
+    	 Thread.sleep(3000);
+    	 driver.findElement(txtSearchField).sendKeys(TrackingNumber); 
+    	 driver.findElement(txtSearchField).sendKeys(Keys.ENTER); 
+    	 Thread.sleep(5000);
+    	 driver.findElement(btnDealDetails).click();
+    	 Thread.sleep(2000);
+    	 
+     }
+     
+     public void EditTracking() throws Exception
+     {
+    	 driver.findElement(btnEditTrackingNumber).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnYes).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(txtTrackingEdit).clear();
+    	 Thread.sleep(2000);
+    	 driver.findElement(txtTrackingEdit).sendKeys("TBA202120212000"); 
+    	 driver.findElement(txtTrackingEdit).sendKeys(Keys.ENTER); 
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnYes).click();
+    	 
+     }
+     
+     public void EditEmail() throws Exception
+     {
+    	 driver.findElement(btnEditSenderEmail).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(txtEmail).click();
+    	// driver.findElement(txtEmail).clear();
+    	// Thread.sleep(2000);
+    	 driver.findElement(txtEmail).sendKeys("ifrah@mailinator.com");
+    	 Thread.sleep(2000);
+         driver.findElement(txtEmail).sendKeys(Keys.ENTER);
+    	// Thread.sleep(2000);
+    	
+    	 driver.findElement(btnSave).click();
+    	 Thread.sleep(2000);
+    	 
+    	 
+//    	 driver.findElement(DropDownUserEmail).click();
+//  		driver.findElement(DropDownUserEmail).sendKeys(UserEmail); 
+//  		driver.findElement(DropDownUserEmail).sendKeys(Keys.ENTER); 
+//    	 
+     }
+     
+     public void VerifyEmail() throws Exception
+     {
+    	 ActualEmail=driver.getPageSource();
+			
+			Assert.assertTrue(ActualEmail.contains("ifrah@mailinator.com"));
+		{
+			Log.info("****************************************Email has been Verified  ************************************************");
+			System.out.println("Email has been Verified"); 
+		}
+    	 
+     }
+      
+     public void VerifyMerge(String TrackingNumber) throws Exception
+     {
+    	 driver.findElement(btnShipmentsPageClick).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(txtClearSearch).click();
+    	 driver.findElement(txtSearchField).sendKeys(TrackingNumber); 
+    	 driver.findElement(txtSearchField).sendKeys(Keys.ENTER); 
+    	 Thread.sleep(5000);
+    	 
+    	 AcutalPayment=driver.getPageSource();
+			
+			Assert.assertTrue(AcutalPayment.contains("No records found"));
+		{
+			Log.info("***************************************Tracking number has been merged ************************************************");
+			System.out.println("TrackingNumber has been merged"); 
+		}
+
+		
+		
+     }
+     
+     
+     public void EditSubmissionDate() throws Exception
+     {
+    	 driver.findElement(btnEditDate).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnYes).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(txtEditDate).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnDate).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnSaveDate).click();
+    	 Thread.sleep(2000);
+     }
+     
+     
+     public void VerifyDate() throws Exception
+     {
+    	 ActualDate=driver.getPageSource();
+			
+			Assert.assertTrue(ActualDate.contains("03/1/2021 "));
+		{
+			Log.info("****************************************Date has been Verified  ************************************************");
+			System.out.println("Date has been Verified"); 
+		}
+    	 
+     }
+     
+     
+     public void EditStatus() throws Exception
+     {
+    	 driver.findElement(btnCurrentStatus).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnClosedStatus).click();
+    	 Thread.sleep(2000);
+    	 driver.findElement(btnYes).click();
+    	 Thread.sleep(2000);
+     }
+     
+     public void VerifyStatus() throws Exception
+     {
+    	 ActualStatus=driver.getPageSource();
+			
+			Assert.assertTrue(ActualStatus.contains("Closed No"));
+		{
+			Log.info("****************************************Status has been Verified  ************************************************");
+			System.out.println("Status has been Verified"); 
+		}
+    	 
+     } 
+     
+     
+     
+     
 }
 

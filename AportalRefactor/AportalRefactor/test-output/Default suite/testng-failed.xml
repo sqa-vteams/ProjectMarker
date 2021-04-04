@@ -5,8 +5,7 @@
     <classes>
       <class name="AportalTestClasses.TestShipments">
         <methods>
-          <include name="CreatePayment"/>
-          <include name="CreatShipment"/>
+          <include name="EditShipment"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>

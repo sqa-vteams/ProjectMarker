@@ -35,7 +35,7 @@ public class ExcelUtils {
 		   
 			 public ArrayList<ExcelModel> readItemsFromExcel() throws IOException {
 					// Specify the path of file
-					File src = new File("C:\\Users\\farhan.ahmed\\git\\ProjectMarker\\AportalRefactor\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
+					File src = new File("C:\\Users\\Farhan\\eclipse-workspace\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
 					
 					// load file
 					FileInputStream fi = new FileInputStream(src);

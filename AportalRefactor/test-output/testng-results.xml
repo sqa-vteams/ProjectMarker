@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
@@ -28,6 +29,33 @@
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- AportalTestClasses.TestShipments -->
+=======
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-22T20:51:35 PKT" name="Default suite" finished-at="2021-01-22T20:53:06 PKT" duration-ms="91522">
+    <groups>
+    </groups>
+    <test started-at="2021-01-22T20:51:35 PKT" name="Default test" finished-at="2021-01-22T20:53:06 PKT" duration-ms="91522">
+      <class name="AportalTestClasses.TestDeals">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:51:35 PKT" name="beforeClass" finished-at="2021-01-22T20:52:01 PKT" duration-ms="26541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="CreateDeal()[pri:0, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:52:01 PKT" name="CreateDeal" finished-at="2021-01-22T20:52:58 PKT" duration-ms="56587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateDeal -->
+        <test-method signature="SendNewsletterEmail()[pri:1, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:52:58 PKT" name="SendNewsletterEmail" finished-at="2021-01-22T20:53:06 PKT" duration-ms="8313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendNewsletterEmail -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:AportalTestClasses.TestDeals@36d585c]" started-at="2021-01-22T20:53:06 PKT" name="afterClass" finished-at="2021-01-22T20:53:06 PKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- AportalTestClasses.TestDeals -->
+>>>>>>> refs/remotes/origin/master
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

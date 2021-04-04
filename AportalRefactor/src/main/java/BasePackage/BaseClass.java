@@ -24,6 +24,7 @@ public class BaseClass {
 
 
 	public WebDriver driver; 
+<<<<<<< HEAD
 	public String test; 
 
 	
@@ -40,6 +41,23 @@ public class BaseClass {
 		     String baseUrl = "https://aportal.foggybeans.com/login";
 
 			 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Farhan\\Downloads\\chromedriver.exe");
+=======
+
+	
+	public BaseClass(WebDriver driver)
+	{
+		this.driver=driver;                                                   //Constructor with argument
+	}
+	
+	 public WebDriver LaunchBrowser() {    
+		
+		System.setProperty("webdriver.chrome.silentOutput", "true");
+		Logger.getLogger("org.openqa.selenium.remote").setLevel(Level.OFF);
+		
+		     String baseUrl = "https://staging-aportalv2.584wed.com/login";
+
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Farhan\\Documents\\chromedriver.exe");
+>>>>>>> refs/remotes/origin/master
 			driver = new ChromeDriver();
 			driver.get(baseUrl);
 			driver.manage().window().maximize();

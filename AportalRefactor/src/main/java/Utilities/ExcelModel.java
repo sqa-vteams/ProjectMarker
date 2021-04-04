@@ -16,6 +16,7 @@ public String DTitle;
 public String DSub;
 public String Dvalue;
 public int RowNumber=3;
+<<<<<<< HEAD
 public String ShipmentTrackingNumer;
 public String ShipmentUserEmail;
 public String ShipmentKHNotes;
@@ -24,6 +25,8 @@ public String PaymentSenderEmail;
 public String PaymentAmount;
 
 
+=======
+>>>>>>> refs/remotes/origin/master
 
 //public String[] DTitle = new String[RowNumber];
 	

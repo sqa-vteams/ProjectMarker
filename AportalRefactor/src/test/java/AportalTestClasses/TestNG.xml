@@ -2,6 +2,7 @@
 
 <suite thread-count="2" verbose="1" name="Aportal Suite"
 	annotations="JDK" parallel="tests">
+<<<<<<< HEAD
   
 
 	<test name="Shipments Module Test Suite">
@@ -14,6 +15,18 @@
 			 <include name="EditUserEmail"/>
 			 <include name="EditSubmission"/>
 			 <include name="ChangeStatus"/>
+=======
+    <listeners>
+       <listener class-name="AportalTestClasses.Items"/>
+  </listeners>
+
+	<test name="Items Module Test Suite">
+
+		<classes>
+			<class name="AportalTestClasses.Items">
+			 <methods>
+			 <include name="CreateItem"/>
+>>>>>>> refs/remotes/origin/master
 			    
 			  
 			</methods>

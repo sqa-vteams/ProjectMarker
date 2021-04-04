@@ -71,6 +71,7 @@ public class ExcelUtils {
 		 
 			 public ArrayList<ExcelModel> readDealsFromExcel() throws IOException {
 					// Specify the path of file
+<<<<<<< HEAD
 					File src = new File("C:\\Users\\farhan.ahmed\\git\\ProjectMarker\\AportalRefactor\\AportalRefactor\\src\\main\\java\\UtilitiesItems.xlsx");
 					
 					// load file
@@ -168,6 +169,48 @@ public class ExcelUtils {
 					}
 					return modelList;
 				}
+=======
+					File src = new File("C:\\Users\\Farhan\\eclipse-workspace\\AportalRefactor\\src\\main\\java\\Utilities\\Items.xlsx");
+					
+					// load file
+					FileInputStream fi = new FileInputStream(src);
+					// Load workbook
+					XSSFWorkbook workbook = new XSSFWorkbook(fi);
+					// Load Sheet
+					XSSFSheet sheet = workbook.getSheet("Sheet2");
+					ArrayList<ExcelModel> modelList = new ArrayList<ExcelModel>();
+					int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
+				//	model.RowNumber=rowCount+1;
+
+					for (int i = 1; i < rowCount+1 ; i++) {
+						//int j=0;
+						//ExcelModel excelModel = new ExcelModel();
+						XSSFRow row = sheet.getRow(i);
+			/*			excelModel.fname = row.getCell(0).toString();
+						excelModel.lname = row.getCell(1).toString();
+						excelModel.email = row.getCell(2).toString();
+						excelModel.mobile = row.getCell(3).toString();*/
+					//	System.out.println(rowCount);
+						model.DTitles[i]=row.getCell(0).toString();
+						//model.DTitle=row.getCell(0).toString();
+						//model.DTitles[i]=model.DTitle.toString();
+						//System.out.println(model.DTitles[i]);
+						model.DSubs[i] = row.getCell(1).toString();
+						//System.out.println(model.DSubs[i]);
+						model.DValues[i]= row.getCell(2).toString();
+						//System.out.println(model.DValues[i]);
+						//j++;
+						model.INames[i]=row.getCell(3).toString();
+						
+						
+						
+						modelList.add(model);
+					}
+					return modelList;
+				}
+		   
+		 
+>>>>>>> refs/remotes/origin/master
 		  }
 	
 

@@ -29,8 +29,13 @@ public class TestDeals {
 	public static String[] DealSubTitle=new String[RowCount];
 	public static String[] DealValue=new String[RowCount];
 	public static String[] ItemName=new String[RowCount];
+<<<<<<< HEAD
 	
 
+=======
+	public static String sample;
+	public static String sample1;
+>>>>>>> refs/remotes/origin/master
 	
 //	
 //	@Test(priority=0)

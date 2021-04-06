@@ -74,8 +74,8 @@ public class BaseClass {
 	// @Test(dataProvider = "Authentication")
 	 public WebDriver LoginSetup() {    
 			
-	           driver.findElement(By.id("username")).sendKeys("developer");;	
-	           driver.findElement(By.id("password")).sendKeys("qatest_bfmr");
+	           driver.findElement(By.id("username")).sendKeys("farhan");;	
+	           driver.findElement(By.id("password")).sendKeys("qatest_603");
 	           driver.findElement(By.xpath("//button[contains(text(),'Log In')]")).click();
 				return this.driver;
 		}

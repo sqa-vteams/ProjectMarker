@@ -48,12 +48,13 @@ public class TestShipments {
 	  Log.info("****************************************Create Manual has been Clicked ************************************************");
 	  Thread.sleep(2000);
 	  ShipTrackingNumber = "TBA326"+ ShipmentsPage.randomWithRange(1,1000000000);
+	  //ShipTrackingNumber="TBA462146214610";
 	  ObjShip.SetTrackingNumber(ShipTrackingNumber);
 	  Log.info("****************************************Tracking Number Has been Entered ************************************************");
 	  Thread.sleep(2000);
 	  ObjShip.SetSenderEmail("farhanahmed.projectmarker@gmail.com");
 	  Log.info("****************************************Sender Email has been set ************************************************");
-	  Thread.sleep(2000);
+	  Thread.sleep(5000);
 	  ObjShip.SetStatus();
 	  Log.info("****************************************Status has been Saved ************************************************");
 	  Thread.sleep(2000);
@@ -104,7 +105,7 @@ public class TestShipments {
 	  ObjShip.SetUserEmail("farhanahmed.projectmarker@gmail.com");
 	  Log.info("****************************************User Email has been Set ************************************************");
 
-	  Thread.sleep(2000);
+	  Thread.sleep(5000);
 	  ObjShip.SetAmount("120");
 	  
 	  Log.info("****************************************Payment Amoutn has been Added ************************************************");
@@ -200,7 +201,7 @@ public class TestShipments {
 		
 		Objlogin= new LoginPage(driver);
 		
-		Objlogin.LoginToAportal("developer", "qatest_bfmr");
+		Objlogin.LoginToAportal("farhan", "qatest_603");
 		
 		Log.info("****************************************Login Done Via Developer Account  ************************************************");
   }

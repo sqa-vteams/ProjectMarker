@@ -45,13 +45,16 @@ public class ShipmentsPage {
     
     By txtEmail=By.xpath("/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]");
     
-    By btnEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[1]/p/i");
+   // By btnEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[1]/p/i");
+    By btnEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[9]/div/div[1]/p/i");
+//    By txtEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[1]/input");
+    By txtEditDate=By.xpath("/html/body/div/div/div/div/div[2]/div[2]/div/div/div[1]/div/div/div[9]/div/div[2]/div/div[1]/input");
     
-    By txtEditDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[1]/input");
+//    By btnDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[2]/div/div[1]/div[1]/div/div[3]/span/div/button[1]/span[2]");
     
-    By btnDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[2]/div/div[1]/div[1]/div/div[3]/span/div/button[1]/span[2]");
+    By btnDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[9]/div/div[2]/div/div[2]/div/div[1]/div[1]/div/div[3]/span/div/button[1]/span[2]");
     
-    By btnSaveDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[8]/div/div[2]/div/div[2]/div/div[2]/button");
+    By btnSaveDate=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/div/div/div[9]/div/div[2]/div/div[2]/div/div[2]/button");
     
     
     By btnCurrentStatus=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div[1]/header/div/span/span");
@@ -68,6 +71,7 @@ public class ShipmentsPage {
     String ActualEmail="";
     String ActualDate="";
     String ActualStatus="";
+    String TrackingError="";
     
     public ShipmentsPage(WebDriver driver)
 	{
@@ -112,9 +116,19 @@ public class ShipmentsPage {
     	
     }
     
-    public void SaveShipment()
+    public void SaveShipment() throws InterruptedException
     {
     	driver.findElement(btnSaveShipment).click();
+    	TrackingError=driver.getPageSource();
+    	if (TrackingError.contains("Tracking # already noted"))
+    	{
+    		Thread.sleep(2000);
+    		driver.findElement(btnYes).click();
+    	}
+    	else
+    	{
+    		// Do Nothing
+    	}
     }
     
     public void ClickPaymentTab()
@@ -159,7 +173,7 @@ public class ShipmentsPage {
     	 driver.findElement(txtSearchField).clear(); 
     	 driver.findElement(txtSearchField).sendKeys(shipmentTrackingNumber); 
     	 driver.findElement(txtSearchField).sendKeys(Keys.ENTER); 
-    	 Thread.sleep(5000);
+    	 Thread.sleep(7000);
     	 
     	 AcutalShipment=driver.getPageSource();
 			
@@ -184,7 +198,7 @@ public class ShipmentsPage {
     	 Thread.sleep(3000);
     	 driver.findElement(txtSearchField).sendKeys(TrackingNumber); 
     	 driver.findElement(txtSearchField).sendKeys(Keys.ENTER); 
-    	 Thread.sleep(5000);
+    	 Thread.sleep(8000);
     	 
  	 AcutalPayment=driver.getPageSource();
 			
@@ -300,7 +314,7 @@ public class ShipmentsPage {
      {
     	 ActualDate=driver.getPageSource();
 			
-			Assert.assertTrue(ActualDate.contains("03/1/2021 "));
+			Assert.assertTrue(ActualDate.contains("04/1/2021 "));
 		{
 			Log.info("****************************************Date has been Verified  ************************************************");
 			System.out.println("Date has been Verified"); 

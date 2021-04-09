@@ -47,8 +47,8 @@ public class TestShipments {
 	  ObjShip.ClickCreateShipments();
 	  Log.info("****************************************Create Manual has been Clicked ************************************************");
 	  Thread.sleep(2000);
-	  ShipTrackingNumber = "TBA326"+ ShipmentsPage.randomWithRange(1,1000000000);
-	  //ShipTrackingNumber="TBA462146214610";
+	 // ShipTrackingNumber = "TBA326"+ ShipmentsPage.randomWithRange(1,1000000000);
+	  ShipTrackingNumber="TBA462146214610";
 	  ObjShip.SetTrackingNumber(ShipTrackingNumber);
 	  Log.info("****************************************Tracking Number Has been Entered ************************************************");
 	  Thread.sleep(2000);

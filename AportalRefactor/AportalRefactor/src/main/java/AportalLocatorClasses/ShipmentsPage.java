@@ -12,7 +12,7 @@ public class ShipmentsPage {
 	
 	By btnShipmentsPageClick=By.xpath("/html/body/div[1]/div/div/div/aside/div/nav/ul/li[5]/a");
 	By btnCreateShipmentClick=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div[1]/header[2]/div/a");
-	By txtTrackingNumber=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div/div[1]/div[1]/form/div[1]/div/div[1]/div/input");
+	By txtTrackingNumber=By.xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div/div[1]/div[1]/form/div[1]/div/div[1]/div/textarea");
 	By DropDownSenderEmailclick=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div/div/div/div[1]/div[1]/form/div[2]/div/div[1]/div[1]/input[1]");
 	//By txtSenderEmail=
     By DropDownStatusClick=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div/div/div/div[1]/div[1]/form/div[3]/div/div[1]/div[1]/div[1]");
@@ -120,7 +120,7 @@ public class ShipmentsPage {
     {
     	driver.findElement(btnSaveShipment).click();
     	TrackingError=driver.getPageSource();
-    	if (TrackingError.contains("Tracking # already noted"))
+    	if (TrackingError.contains(" is already noted"))
     	{
     		Thread.sleep(2000);
     		driver.findElement(btnYes).click();
